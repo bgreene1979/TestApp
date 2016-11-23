@@ -14,7 +14,7 @@ th, td {padding: 5px}
 $servername = "us-cdbr-azure-southcentral-f.cloudapp.net";
 $username = "bf45715e931f52";
 $password = "39a05bfa";
-$dbname = "data";
+$dbname = "lgtest";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
