@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   $usr_name = $_POST["USR_NAME"];
   $email = $_POST["AGE"];
   
-  $sql = "SELECT `NAME`, `USR_NAME`, `AGE` FROM `data` ";
+  $sql = "SELECT `NAME`, `USR_NAME`, `AGE` FROM `lgtest` ";
 
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
