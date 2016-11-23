@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inisope Employee Directory</title>
+  <title>Connection</title>
   <Style> 
 table,th,td {border:1px solid black;
 border-collapse: collapse;}
