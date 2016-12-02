@@ -24,9 +24,11 @@ if ($conn->connect_error) {
 } 
   
 
-  $name = $_POST["NAME"];
+  $name = $_GET["NAME"];
   $USR_NAME = $_GET["USR_NAME"];
-  $email = $_POST["AGE"];
+  $age = $_GET["AGE"];
+  $age = $_POST["ORDER_ID"];
+  $age = $_POST["ITEMS_ORDERED"];
   
 $sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID";
 
@@ -34,14 +36,14 @@ $sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDE
  $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // Output data of each row
-   printf("\n\t<table><tr><th>%s</th><th>%s</th><th>%s</th>",
-       "Name", "User Name", "Age");
+   printf("\n\t<table><tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th>",
+       "Name", "User Name", "Age", "Order ID", "Items Ordered");
     while ($row = $result->fetch_assoc()) {
-    printf("<tr> <td>%s</td> <td>%s</td><td>%s</td></tr>",
-         $row["NAME"], $row["USR_NAME"], $row["AGE"]); 
+    printf("<tr> <td>%s</td> <td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>",
+         $row["NAME"], $row["USR_NAME"], $row["AGE"], $row["ORDER_ID"], $row["ITEMS_ORDERED"]); 
 
-  }//seeing if this works
-          // printf("%s, %s<br>", $row["LNAME"], $row["FNAME"]);
+  }
+          
 echo "</table>\n";
    
   } else {
