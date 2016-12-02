@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   $USR_NAME = $_GET["USR_NAME"];
   $email = $_POST["AGE"];
   
-  $sql = "SELECT NAME, USR_NAME, EMAIL FROM clients WHERE USR_NAME = '$USR_NAME'";
+$sql = "SELECT NAME, USER_NAME, AGE, order_id, items_ordered FROM data join orders on data.order_id = orders.ID where NAME like '%USR_NAME%'";
 
 
  $result = $conn->query($sql);
