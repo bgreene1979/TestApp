@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   $age = $_POST["ORDER_ID"];
   $age = $_POST["ITEMS_ORDERED"];
   
-$sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID";
+$sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID WHERE USER_NAME LIKE '%USER_NAME%'";
 
 
  $result = $conn->query($sql);
