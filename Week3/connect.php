@@ -25,12 +25,12 @@ if ($conn->connect_error) {
   
 
   $name = $_GET["NAME"];
-  $USR_NAME = $_GET["USR_NAME"];
+  $usr_name = $_GET["USR_NAME"];
   $age = $_GET["AGE"];
   $age = $_POST["ORDER_ID"];
   $age = $_POST["ITEMS_ORDERED"];
   
-$sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID";
+$sql = "SELECT NAME, USR_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID";
 
 
  $result = $conn->query($sql);
