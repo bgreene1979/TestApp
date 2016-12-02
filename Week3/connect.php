@@ -27,8 +27,9 @@ if ($conn->connect_error) {
   $name = $_GET["NAME"];
   $user_name = $_GET["USER_NAME"];
   $age = $_GET["AGE"];
-  $age = $_POST["ORDER_ID"];
-  $age = $_POST["ITEMS_ORDERED"];
+  $order_id = $_GET["ORDER_ID"];
+  $items_ordered = $_GET["ITEMS_ORDERED"];
+  $id = $_GET["ID"]
   
 $sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDERS on DATA.ORDER_ID = ORDERS.ID WHERE USER_NAME LIKE '%USER_NAME%'";
 
