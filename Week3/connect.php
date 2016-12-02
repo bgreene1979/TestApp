@@ -40,7 +40,7 @@ $sql = "SELECT NAME, USER_NAME, AGE, ORDER_ID, ITEMS_ORDERED FROM DATA join ORDE
        "Name", "User Name", "Age", "Order ID", "Items Ordered");
     while ($row = $result->fetch_assoc()) {
     printf("<tr> <td>%s</td> <td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>",
-         $row["NAME"], $row["USR_NAME"], $row["AGE"], $row["ORDER_ID"], $row["ITEMS_ORDERED"]); 
+         $row["NAME"], $row["USER_NAME"], $row["AGE"], $row["ORDER_ID"], $row["ITEMS_ORDERED"]); 
 
   }
           
