@@ -25,7 +25,7 @@ if ($conn->connect_error) {
   
 
   $name = $_GET["NAME"];
-  $user_name = $_GET["USER_NAME"];
+  $USER_NAME = $_GET["USER_NAME"];
   $age = $_GET["AGE"];
   $order_id = $_GET["ORDER_ID"];
   $items_ordered = $_GET["ITEMS_ORDERED"];
